@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eff2f6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear"
+            android:padding="7dp"
+            android:background="@drawable/rounded"
+            android:layout_margin="10dp"
+            android:orientation="horizontal" >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/back"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back_black_24dp"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Search users"
+                android:imeOptions="actionSearch"
+                android:id="@+id/searchbar"
+                android:background="@null"
+                android:singleLine="true"
+                android:inputType="textAutoComplete|textAutoCorrect"
+                android:layout_gravity="center"
+                android:textSize="20dp"/>
+            <requestFocus/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/search_button"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_search_black_24dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/searchxml"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textSize="23dp"
+            android:textColor="#47525e"
+            android:text="Search the Github users. "
+            android:visibility="visible"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress_bar"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/search_list"
+            android:layout_below="@id/linear"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+</layout>
